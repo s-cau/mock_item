@@ -35,7 +35,7 @@ class SimplePost {
 	 };
 
 	let response = fetch("http://172.31.26.100:5007/neural_search/neural_search", requestOptions).then(response => 
-        	response.json().then(data => JSON.stringify(data.results[0].answer)
+			response.json().then(data => JSON.stringify(data.results[0].answer_score < 0.2 ? 'Non conosco la risposta': data.results[0].answer)));
 	));
    return response;
   }

@@ -11,7 +11,7 @@ class SimplePost {
           arguments: {
             TEXT: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'Mi dispiace, non so come rispondere!'
+              defaultValue: ''
             }
           }
         }

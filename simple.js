@@ -20,12 +20,6 @@ class SimplePost {
   }
 
   get (args) {
-/*		const params={
-		method: "POST", 
-		headers: {"Content-Type": "application/json"},
-		body: JSON.stringify({"name": "morpheus","job": "leader"})
-	};
-*/
 	const raw = JSON.stringify({
 	  "language": "ITA",
 	  "query": args.TEXT,
@@ -40,11 +34,9 @@ class SimplePost {
 	  body: raw
 	 };
 
-	
-//	let response = fetch('https://reqres.in/api/users',params).then(response => 
 	let response = fetch("http://172.31.26.100:5007/neural_search/neural_search", requestOptions).then(response => 
-    response.json().then(data => JSON.stringify(data.results[0].answer)
-));
+        	response.json().then(data => JSON.stringify(data.results[0].answer)
+	));
    return response;
   }
 }

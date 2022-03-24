@@ -35,7 +35,7 @@ class SimplePost {
 	 };
 
 	let response = fetch("http://172.31.26.100:5007/neural_search/neural_search", requestOptions).then(response => 
-			response.json().then(data => JSON.stringify(data.results[0].content)));
+			response.json().then(data => JSON.stringify("Gli ominidi (Hominidae Gray, 1825), sono una famiglia di primati risalente al Miocene inferiore. A questa famiglia appartengono gli esseri umani e gran parte delle scimmie antropomorfe: oranghi, gorilla e scimpanzé, oltre ad alcuni gruppi fossili, tra i quali gli australopitechi. Fino ai primi anni sessanta venivano classificati come ominidi solo l\'uomo e generi estinti ritenuti appartenenti alla linea evolutiva umana; per questo il termine viene talvolta ancora usato nel linguaggio comune con tale significato, mentre adesso tali specie costituiscono la sottotribù Hominina.")));
    return response;
   }
 }
